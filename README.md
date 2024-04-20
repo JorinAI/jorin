@@ -33,9 +33,10 @@ bun run src/index.ts
 
 `jorin-cli` makes use of:
 
-* configstore
-* commander, inquirer
-* figlet, chalk, gradient-string
+* Bun
+* Cross platform: configstore, env-paths
+* CLI: commander, inquirer
+* UI: figlet, chalk, gradient-string
 
 ### Dev Requirements
 

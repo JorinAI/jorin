@@ -15,7 +15,7 @@ const defaultConfig = {
     }
 };
 
-const config = new Configstore('json', defaultConfig, {globalConfigPath: true});
+const config = new Configstore('jorin', defaultConfig, {globalConfigPath: true});
 
 // console.log(config.get('foo'));
 //=> 'bar'

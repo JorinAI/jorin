@@ -22,7 +22,7 @@ program.name('jorin').description('Jorin AI client for managing tasks, sessions,
 
 program
     .option('-l, --llm <llm>', 'Specify a Large Language Model')
-    .option('-hub <url>', 'Specify a Jorin Hub URL')
+    .option('--hub <url>', 'Specify a Jorin Hub URL')
 ;
 
 program.action(() => {
@@ -51,6 +51,6 @@ program.addHelpText('beforeAll', gradient.summer.multiline(figlet.textSync('Jori
   verticalLayout: 'controlled smushing',
 })));
   
-program.addHelpText('afterAll', 'Learn more about Jorin: https://jorin.ai');
+program.addHelpText('afterAll', '\nLearn more about Jorin: https://jorin.ai');
 
 await program.parseAsync(process.argv);
