@@ -1,7 +1,18 @@
 import Configstore from 'configstore';
 
 const defaultConfig = {
-    isSetup: false
+    isSetup: false,
+    llms: [
+        {
+            name: 'ollama',
+            url: 'http://127.0.0.1:11434',
+            type: 'openai',
+        }
+    ],
+    defaultLLM: 'ollama',
+    hub: {
+        url: 'https://hub.jorin.ai',
+    }
 };
 
 const config = new Configstore('json', defaultConfig, {globalConfigPath: true});

@@ -6,6 +6,7 @@ import agents from './commands/agents';
 import setup from './commands/setup';
 import setupAction from './actions/setup';
 import config from './utils/config';
+import llms from './commands/llm';
 import chalk from 'chalk';
 import figlet from 'figlet';
 
@@ -40,6 +41,7 @@ program
   .addCommand(doCmd)
   .addCommand(sessions)
   .addCommand(agents)
+  .addCommand(llms)
   .addCommand(setup);
 ;
 

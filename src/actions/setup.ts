@@ -4,8 +4,6 @@ import figlet from 'figlet';
 import config from '../utils/config';
 import { confirm } from '@inquirer/prompts';
 
-
-
 export default async (options) => {
     if (options && options.clear && await confirm({ message: 'Continue?' })) {
 
@@ -20,13 +18,19 @@ export default async (options) => {
         horizontalLayout: 'controlled smushing',
         verticalLayout: 'controlled smushing',
     })));
+    
+    console.log('Welcome to Jorin! Let\'s get you set up.');
 
-    console.log('Running setup. You can run this again with `jorin setup`.');
+    console.log('You can run this again at any time with `jorin setup`.');
 
     if (!await confirm({ message: 'Continue?' })) {
         return;
     }
 
+    // TOOD: ask what LLMs they want to use
+
     config.set('isSetup', true);
-    console.log('Setup complete. Run `jorin --help` to see available commands.');
+    console.log('Setup complete! Your config has been saved to ' + config.path);
+    console.log('Run `jorin --help` to see available commands.');
+
 }
