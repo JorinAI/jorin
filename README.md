@@ -37,6 +37,10 @@ bun run src/index.ts
 * commander, inquirer
 * figlet, chalk, gradient-string
 
+### Dev Requirements
+
+* [bun](https://bun.sh/)
+
 ## Packaging
 
 ```bash
@@ -46,3 +50,8 @@ make
 Or `make -B` to force.
 
 This should create `dist/jorin`.
+
+Packaging requirements:
+
+* bun
+* make
