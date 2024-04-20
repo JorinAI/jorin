@@ -27,11 +27,19 @@ Commands:
 
 ## Dev
 
+```bash
 bun run src/index.ts
+```
+
+`jorin-cli` makes use of:
+
+* configstore
+* commander, inquirer
+* figlet, chalk, gradient-string
 
 ## Packaging
 
-```
+```bash
 make
 ```
 

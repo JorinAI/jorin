@@ -5,15 +5,14 @@ import sessions from './commands/sessions';
 import agents from './commands/agents';
 import setup from './commands/setup';
 import setupAction from './actions/setup';
-
+import config from './utils/config';
 import chalk from 'chalk';
+import figlet from 'figlet';
 
 const error = chalk.bold.red;
 const warning = chalk.italic.inverse.hex('#FFA500'); // Orange color
 
 const gradient = require('gradient-string');
-
-let isSetup = false;
 
 const program = new Command();
 
@@ -26,7 +25,7 @@ program
 ;
 
 program.action(() => {
-  if (isSetup) {
+  if (config.get('isSetup')){
     console.log(gradient.summer('JORIN.AI'));
     console.log(error('Command required'));
     console.log('Try --help for available commands');
@@ -42,5 +41,14 @@ program
   .addCommand(sessions)
   .addCommand(agents)
   .addCommand(setup);
+;
 
-program.parse(process.argv);
+program.addHelpText('beforeAll', gradient.summer.multiline(figlet.textSync('Jorin.ai', {
+  font: 'ANSI Shadow',
+  horizontalLayout: 'controlled smushing',
+  verticalLayout: 'controlled smushing',
+})));
+  
+program.addHelpText('afterAll', 'Learn more about Jorin: https://jorin.ai');
+
+await program.parseAsync(process.argv);
