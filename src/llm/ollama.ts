@@ -1,10 +1,10 @@
-
-// TODO: handle errors
+import ollama from 'ollama';
 
 // bun doesn't connect to localhost. https://github.com/oven-sh/bun/issues/1425
 const URL = 'http://127.0.0.1:11434/v1/chat/completions';
 
-const ollama = async (message: string) => {
+// ollama supports openai's API but not function calling
+const ollama_openai = async (message: string) => {
     const response = await fetch(URL, {
         method: 'POST',
         headers: {
@@ -21,8 +21,17 @@ const ollama = async (message: string) => {
         }),
     });
 
-    const reply = (await response.json()).choices[0].message.content;
-    return reply;
+    return (await response.json()).choices[0].message.content;
 };
 
-export default ollama;
+
+const ollama_llm = async function (message: string) {
+    return (await ollama.chat({
+        model: 'llama3',
+        messages: [
+            { role: 'user', content: message }
+        ],
+    })).message.content;    
+};
+
+export default ollama_llm;
