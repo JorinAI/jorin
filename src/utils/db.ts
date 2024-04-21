@@ -5,14 +5,14 @@ import { mkdir } from "node:fs/promises";
 
 let db: Database | undefined;
 
-export default async () => {
+// Docs: https://bun.sh/docs/api/sqlite
+
+export default async (mockPaths?: ReturnType<typeof envPaths>) => {
     if (db) {
         return db;
     }
 
-    const paths = envPaths('jorin', {
-        suffix: ''
-    });
+    const paths = mockPaths || envPaths('jorin', { suffix: '' });
     
     // create dir if needed
     await mkdir(paths.data, { recursive: true });
@@ -20,7 +20,6 @@ export default async () => {
     const databasePath = paths.data + '/jorin.sqlite';
     // console.log('Database path:', databasePath);
     
-    // https://bun.sh/docs/api/sqlite
     db = new Database(databasePath,  { create: true });
     
     return db;
