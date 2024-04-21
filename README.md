@@ -1,12 +1,21 @@
 # `jorin` - Jorin CLI
 
+<p align="center">
+  <a href="https://bun.sh"><img src="https://raw.githubusercontent.com/JorinAI/resources/main/logos/icon-and-name-horizontal-small.png" alt="Jorin AI" height=170></a>
+</p>
+<h1 align="center">Jorin</h1>
+
+## What is Jorin?
+
+
+
 **Console command to access and control [Jorin](https://jorin.ai/).**
 
-Jorin is an AI productivity tool designed for power users and developers.
-Jorin can collaborate with you on your laptop,
+Jorin is an AI framework and productivity tool designed for power users and developers.
+Jorin can collaborate with you on your laptop, your phone,
 run in the background to complete a goal or even delegate tasks across other AI agents.
 
-## Installation
+## Install
 
 To install or upgrade:
 
@@ -15,7 +24,7 @@ curl -fsSL https://jorin.ai/install | bash
 ```
 
 This will install `jorin` to `$HOME/.jorin/bin` and add it to your path.
-You can also manually download a [release](https://github.com/JorinAI/jorin-cli/releases).
+You can also manually download a [release from Github](https://github.com/JorinAI/jorin-cli/releases).
 
 ## Quick start
 
@@ -76,6 +85,8 @@ $ jorin llm
 
 ## Development
 
+Jorin is written in TypeScript. Refer to the [Contributing guide](CONTRIBUTING.md) to start contributing to Jorin.
+
 ```bash
 git clone https://github.com/JorinAI/jorin-cli
 cd jorin-cli
@@ -85,7 +96,7 @@ bun run src/index.ts
 
 `jorin-cli` makes use of:
 
-* Bun
+* [Bun](https://bun.sh/) - a JavaScript runtime
 * Cross platform: configstore, env-paths
 * CLI: commander, inquirer
 * UI: figlet, chalk, gradient-string
@@ -110,3 +121,7 @@ Packaging requirements:
 
 * bun
 * make
+
+## Licence
+
+Refer to the [Licence file](LICENCE) for licensing information.
