@@ -125,4 +125,4 @@ Packaging requirements:
 
 ## Licence
 
-Refer to the [Licence file](./LICENCE) for licensing information.
+Refer to the [Licence file](./LICENSE) for licensing information.
