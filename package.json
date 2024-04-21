@@ -13,6 +13,9 @@
     "type": "git",
     "url": "https://github.com/jorinai/jorin.git"
   },
+  "scripts": {
+    "release": "release-it"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -27,6 +30,7 @@
     "env-paths": "^3.0.0",
     "figlet": "^1.7.0",
     "gradient-string": "^2.0.2",
-    "ollama": "^0.5.0"
+    "ollama": "^0.5.0",
+    "release-it": "^17.2.0"
   }
 }
