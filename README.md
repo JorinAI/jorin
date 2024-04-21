@@ -1,4 +1,4 @@
-# `jorin` - Jorin CLI
+# `jorin` - Jorin AI
 
 <p align="center">
   <a href="https://bun.sh"><img src="https://raw.githubusercontent.com/JorinAI/resources/main/logos/icon-and-name-horizontal-small.png" alt="Jorin AI" height=170></a>
@@ -24,7 +24,7 @@ curl -fsSL https://jorin.ai/install | bash
 ```
 
 This will install `jorin` to `$HOME/.jorin/bin` and add it to your path.
-You can also manually download a [release from Github](https://github.com/JorinAI/jorin-cli/releases).
+You can also manually download a [release from Github](https://github.com/JorinAI/jorin/releases).
 
 ## Quick start
 
@@ -88,14 +88,14 @@ $ jorin llm
 Jorin is written in TypeScript. Refer to the [Contributing guide](CONTRIBUTING.md) to start contributing to Jorin.
 
 ```bash
-git clone https://github.com/JorinAI/jorin-cli
-cd jorin-cli
+git clone https://github.com/JorinAI/jorin
+cd jorin
 bun install
 bun test
 bun run jorin.ts
 ```
 
-`jorin-cli` makes use of:
+`jorin` makes use of:
 
 * [Bun](https://bun.sh/) - a JavaScript runtime
 * Cross platform: configstore, env-paths

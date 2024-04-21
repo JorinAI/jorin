@@ -12,7 +12,7 @@ else
 	esac
 fi
 
-jorin_uri="https://github.com/jorinai/jorin-cli/releases/latest/download/jorin-${target}"
+jorin_uri="https://github.com/jorinai/jorin/releases/latest/download/jorin-${target}"
 echo $jorin_uri
 jorin_install_dir="$HOME/.jorin/bin"
 exe="$jorin_install_dir/jorin"
