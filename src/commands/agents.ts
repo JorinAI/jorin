@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { error, warning, info } from '../utils/chalkStyles';
+import notImplemented from '../utils/notImplemented';
 
 const agents = new Command('agents').description('Agent management');
 
@@ -8,6 +8,7 @@ agents.command('list')
 .action(() => {
     console.log('Listing agents');
     // List agents logic here
+    notImplemented();
 });
 
 agents.command('make')
@@ -21,6 +22,7 @@ agents.command('make')
     console.log('Making new agent');
     console.log(options);
     // Agent creation logic here
+    notImplemented();
 });
 
 export default agents;

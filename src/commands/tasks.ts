@@ -1,20 +1,20 @@
 import { Command } from 'commander';
-import { error, warning, info } from '../utils/chalkStyles';
+import styles from '../utils/chalkStyles';
+import notImplemented from '../utils/notImplemented';
 
 const tasks = new Command('tasks').description('Create, list, watch and manage tasks');
 
 tasks.command('list')
   .description('List all tasks')
   .action(() => {
-    console.log(info('Listing tasks'));
-    console.log(error('Error!'));
-    console.log(warning('Warning!'));
+    notImplemented();
   });
 
 tasks.command('watch <id>')
   .description('Start watching a specific task')
   .action((id) => {
-    console.log(info(`Watching task ID: ${id}`));
+    console.log(styles.info(`Watching task ID: ${id}`));
+    notImplemented();
   });
 
 tasks.command('new <description>')
@@ -23,13 +23,15 @@ tasks.command('new <description>')
   .option('--agent <id>', 'Specify agent ID to use')
   .option('--agent-foo <options>', 'Configure agent-specific options, like --agent-llm')
   .action((description, options) => {
-    console.log(info(`Adding task: ${description}`));
+    console.log(styles.info(`Adding task: ${description}`));
     console.log(options);
+    notImplemented();
   });
 
 const doCmd = new Command('do').description('Alias for task new --watch')
     .action((task) => {
         console.log(`Executing task: ${task} with watching enabled`);
+        notImplemented();
         // Equivalent task creation logic here
     });
 

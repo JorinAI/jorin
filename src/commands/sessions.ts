@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { error, warning, info } from '../utils/chalkStyles';
+import notImplemented from '../utils/notImplemented';
 
 const sessions = new Command('sessions').description('Session management');
 
@@ -10,6 +10,7 @@ sessions.command('new')
     console.log('Starting new session');
     console.log(options);
     // Session creation logic here
+    notImplemented();
   });
 
 sessions.command('exec')
@@ -17,6 +18,7 @@ sessions.command('exec')
   .action(() => {
     console.log('Executing command in session');
     // Command execution logic here
+    notImplemented();
   });
 
 export default sessions;

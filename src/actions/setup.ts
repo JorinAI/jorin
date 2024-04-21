@@ -1,4 +1,4 @@
-import { error, warning, info } from '../utils/chalkStyles';
+import styles from '../utils/chalkStyles';
 const gradient = require('gradient-string');
 import figlet from 'figlet';
 import config from '../utils/config';
@@ -10,10 +10,10 @@ import { unlinkSync } from "node:fs";
 export default async (options) => {
     if (options && options.clear && await confirm({ message: 'Clearn config and database?' })) {
 
-        console.log(warning('Clearing all configurations'));
+        console.log(styles.warning('Clearing all configurations'));
         config.clear();
 
-        console.log(warning('Clearing all database'));
+        console.log(styles.warning('Clearing all database'));
         const dbFile = (await db()).filename;
         unlinkSync(dbFile);
         
