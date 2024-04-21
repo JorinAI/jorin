@@ -1,6 +1,10 @@
 # `jorin` - Jorin CLI
 
-Console command to access and control Jorin
+**Console command to access and control [Jorin](https://jorin.ai/).**
+
+Jorin is an AI productivity tool designed for power users and developers.
+Jorin can collaborate with you on your laptop,
+run in the background to complete a goal or even delegate tasks across other AI agents.
 
 ## Installation
 
@@ -9,6 +13,9 @@ To install or upgrade:
 ```bash
 curl -fsSL https://jorin.ai/install | bash
 ```
+
+This will install `jorin` to `$HOME/.jorin/bin` and add it to your path.
+You can also manually download a [release](https://github.com/JorinAI/jorin-cli/releases).
 
 ## Usage
 
@@ -60,9 +67,12 @@ $ jorin llm
   send [options] <message>  Send a message to an LLM
 ```
 
-## Dev
+## Development
 
 ```bash
+git clone https://github.com/JorinAI/jorin-cli
+cd jorin-cli
+bun install
 bun run src/index.ts
 ```
 
@@ -78,15 +88,16 @@ bun run src/index.ts
 
 * [bun](https://bun.sh/)
 
-## Packaging
+### Packaging
 
 ```bash
 make
 ```
 
-Or `make -B` to force.
+Use `make -B` to force.
 
-This should create `dist/jorin`.
+This will create a single file executable `dist/jorin`,
+using [Bun's build and compilation](https://bun.sh/docs/bundler/executables).
 
 Packaging requirements:
 
