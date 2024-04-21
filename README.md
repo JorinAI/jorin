@@ -91,6 +91,7 @@ Jorin is written in TypeScript. Refer to the [Contributing guide](CONTRIBUTING.m
 git clone https://github.com/JorinAI/jorin-cli
 cd jorin-cli
 bun install
+bun test
 bun run src/index.ts
 ```
 
@@ -124,4 +125,4 @@ Packaging requirements:
 
 ## Licence
 
-Refer to the [Licence file](LICENCE) for licensing information.
+Refer to the [Licence file](./LICENCE) for licensing information.
