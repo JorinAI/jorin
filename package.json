@@ -1,6 +1,6 @@
 {
   "name": "jorin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "module": "jorin.ts",
   "type": "module",
   "homepage": "https://jorin.ai",
