@@ -17,6 +17,13 @@ curl -fsSL https://jorin.ai/install | bash
 This will install `jorin` to `$HOME/.jorin/bin` and add it to your path.
 You can also manually download a [release](https://github.com/JorinAI/jorin-cli/releases).
 
+## Quick start
+
+```
+jorin setup
+jorin do "make a tic tac toe game and deploy it live"
+```
+
 ## Usage
 
 ```
