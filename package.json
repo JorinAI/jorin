@@ -1,7 +1,18 @@
 {
   "name": "jorin",
+  "version": "0.0.1",
   "module": "jorin.ts",
   "type": "module",
+  "homepage": "https://jorin.ai",
+  "license": "MIT",
+  "author": {
+    "name": "Dave Hulbert",
+    "url": "https://dave.engineer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorinai/jorin.git"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
