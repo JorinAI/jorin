@@ -92,7 +92,7 @@ git clone https://github.com/JorinAI/jorin-cli
 cd jorin-cli
 bun install
 bun test
-bun run src/index.ts
+bun run jorin.ts
 ```
 
 `jorin-cli` makes use of:

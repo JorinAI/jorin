@@ -1,6 +1,6 @@
 {
   "name": "jorin",
-  "module": "src/index.ts",
+  "module": "jorin.ts",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"

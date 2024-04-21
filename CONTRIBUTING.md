@@ -7,7 +7,7 @@ Bun is written mostly in TypeScript.
 
 ```bash
 bun install
-bun run src/index.ts
+bun run jorin.ts
 ```
 
 ## Tests
