@@ -21,7 +21,7 @@ if [ ! -d "$jorin_install_dir" ]; then
 	mkdir -p "$jorin_install_dir"
 fi
 
-curl --fail --location --progress-bar --output "$exe.zip" "$jorin_uri"
+curl --fail --location --progress-bar --output "$exe" "$jorin_uri"
 chmod +x "$exe"
 
 echo "Jorin was installed successfully to $exe"
@@ -33,7 +33,7 @@ else
 	*) shell_profile=".bashrc" ;;
 	esac
 	echo "Manually add the directory to your \$HOME/$shell_profile (or similar)"
-	echo "  export PATH=\"\$jorin_install_dir:\$PATH\""
+	echo "  export PATH=\"$jorin_install_dir:\$PATH\""
 
 fi
 echo
