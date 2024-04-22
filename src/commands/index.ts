@@ -19,7 +19,7 @@ const program = new Command();
 
 // TODO: get version from packacge.json
 program.name('jorin').description('Jorin AI client for managing tasks, sessions, and agents.')
-    .version('0.0.1');
+    .version('0.0.2');
 
 program
     .option('-l, --llm <llm>', 'Specify a Large Language Model')
