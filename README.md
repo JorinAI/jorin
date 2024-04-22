@@ -15,6 +15,9 @@ Jorin is an AI framework and productivity tool designed for power users and deve
 Jorin can collaborate with you on your laptop, your phone,
 run in the background to complete a goal or even delegate tasks across other AI agents.
 
+> [!CAUTION]
+> Jorin is experimental and under active development. Lots of things don't work yet.
+
 ## Install
 
 To install or upgrade:
