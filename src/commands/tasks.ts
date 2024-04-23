@@ -1,6 +1,7 @@
 import { Command } from 'commander';
 import styles from '../utils/chalkStyles';
 import notImplemented from '../utils/notImplemented';
+import execBasicLLMTask from '../agents/execBasicLLMTask';
 
 const tasks = new Command('tasks').description('Create, list, watch and manage tasks');
 
@@ -28,11 +29,12 @@ tasks.command('new <description>')
     notImplemented();
   });
 
-const doCmd = new Command('do').description('Alias for task new --watch')
-    .action((task) => {
-        console.log(`Executing task: ${task} with watching enabled`);
-        notImplemented();
-        // Equivalent task creation logic here
+const doCmd = new Command('do').command('do <description>')
+    .description('Alias for task new --watch <description>')
+    .action(async (description) => {
+      console.log(styles.info(`Adding task: ${description}`));
+      await execBasicLLMTask(description);
     });
+
 
 export {tasks, doCmd}
